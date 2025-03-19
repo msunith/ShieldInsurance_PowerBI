@@ -1,0 +1,41 @@
+
+Total_Revenue = sum(fact_premiums[final_premium_amt(INR)])
+
+Total_Revenue(LM) = CALCULATE([Total_Revenue],DATEADD(dim_date[date],-1,MONTH))
+
+Total_Customers = DISTINCTCOUNT(dim_customer[customer_code])
+
+Total_Customers(LM) = CALCULATE([Total_Customers],DATEADD(dim_date[date],-1,MONTH))
+
+DCG = DIVIDE([Total_Customers],DISTINCTCOUNT(dim_date[date]),0)
+DCG(LM) = CALCULATE([DCG],DATEADD(dim_date[date],-1, MONTH))
+DRG = DIVIDE([Total_Revenue],DISTINCTCOUNT(dim_date[date]),0)
+DRG(LM) = CALCULATE([DRG],DATEADD(dim_date[date],-1, MONTH))
+
+
+1.Daily_Revenue = SUM(fact_premiums[final_premium_amt(INR)])
+
+
+last month revenue 
+
+Total_Revenue(LM) = CALCULATE(sum(fact_premiums[final_premium_amt(INR)]), DATEADD(dim_date[date], -1, MONTH))
+
+[or]
+Total_Revenue(LM) = CALCULATE([Total_Revenue],PREVIOUSMONTH(dim_date[date]))
+
+2.Previous_day_Revenue = CALCULATE([Daily_Revenue],PREVIOUSDAY(dim_date[date]))
+
+3. Daily_Revenue_Growth = DIVIDE([Daily_Revenue]-[Previous_day_Revenue],[Previous_day_Revenue],0)
+
+[or]
+
+Daily Revenue Growth % = 
+VAR TodayRevenue = SUM(fact_premiums[final_premium_amt(INR)])
+VAR YesterdayRevenue = CALCULATE(SUM(fact_premiums[final_premium_amt(INR)]), DATEADD(dim_date[date], -1, DAY))
+
+RETURN 
+IF(YesterdayRevenue > 0, (TodayRevenue - YesterdayRevenue) / YesterdayRevenue, BLANK())
+
+
+
+﻿
