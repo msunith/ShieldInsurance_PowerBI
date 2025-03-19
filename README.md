@@ -1,13 +1,13 @@
 # ShieldInsurance_PowerBI
 
-## Project Goal
+### Project Goal
 Analyse Shield Insurance's performance using Power BI, uncovering key insights to optimize investment strategies. This project focused on analyzing investment trends and policy performance across major cities, including Delhi, Chennai, Mumbai, Indore, and Ahmedabad.
 
 ### Data:
 We have insurance data spanning six months, from November 2022 to April 2023, for various policies covering customers aged 19 to 75+ across five different cities.
 
 ### Data Model
-<img src="images/data_model.png" width ="500" height="50%"/>
+<img src="customer_policy_analysis/Images/data_model.png" width ="500" height="50%"/>
 
 ## Stake Holder Request:
 - Show total customers, total revenue, daily revenue growth, daily customer growth as key metrics
@@ -26,14 +26,14 @@ We have insurance data spanning six months, from November 2022 to April 2023, fo
 ## PowerBI Dashboard:
 
  ### Home Page
-<img src="images/home_db.png" width ="500" height="50%"/>
+<img src="customer_policy_analysis/Images/home_db .png" width ="500" height="50%"/>
 
  ### Overall Analysis
-<img src="images/general_db.png" width ="500" height="50%"/>
+<img src="customer_policy_analysis/Images/general_db.png" width ="500" height="50%"/>
 
 ### Age Group Analysis
-<img src="images/agegroup_db.png" width ="500" height="50%"/>
+<img src="customer_policy_analysis/Images/agegroup_db.png" width ="500" height="50%"/>
 
 ### Sales Mode Analysis
-<img src="images/salesmode_db.png" width ="500" height="50%"/>
+<img src="customer_policy_analysis/Images/salesmode_db.png" width ="500" height="50%"/>
 
